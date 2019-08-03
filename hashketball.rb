@@ -122,8 +122,30 @@ def game_hash
 
   
 end
+ 
 
+# game_hash[:away][:players][0][:"Bismack Biyombo"][:steals]
+
+def num_points_scored(p_name)
+  new_list = game_hash
+  player_score = 0
+   new_list.each do |l1key1, l1key2|
+     l1key2[:players].each do |l2key1|
+       l2key1.each do |l3key1, l3key2|
+          s_tring = l3key1.to_s
+
+         if s_tring.include?(p_name)
+         player_score = player_score +l3key2[:points][0]
+         
+          end
+        end
+      end
+   end
+   player_score
+
+end
 binding.pry
+
 
 
 
