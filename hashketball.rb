@@ -1,45 +1,74 @@
 require 'pry'
 # Write your code here!
 
-game_hash = {
+def game_hash
+
+
+      # number: [],
+      # shoe: [],
+      # points: [],
+      # rebounds: [],
+      # assists: [],
+      # steals: [],
+      # blocks: [],
+      # slam_dunks: []
+
+
+{
   home: {
-    team_name: "",
+    team_name: "Brooklyn Nets",
 # colors key points to an array of strings that are team's colors
-    colors: [], 
+    colors: ["Black", "White"], 
     players: [{
-      number: [],
-      shoe: [],
-      points: [],
-      rebounds: [],
-      assists: [],
-      steals: [],
-      blocks: [],
-      slam_dunks: []
+      "Alan Anderson": {
+        
+      },
+      "Reggie Evans": {
+        
+      },
+      "Brook Lopez":{
+        
+      },
+      "Mason Plumlee": {
+        
+      },
+      "Jason Terry": {
+        
+      }
       }]
     },
   away: {
-    team_name: "",
+    team_name: "Charlotte Hornets",
 # colors key points to an array of strings that are team's colors
-    colors: [], 
+    colors: ["Turquoise", "Purple"], 
     players: [{
-      number: [],
-      shoe: [],
-      points: [],
-      rebounds: [],
-      assists: [],
-      steals: [],
-      blocks: [],
-      slam_dunks: []
+      "Jeff Adrien": {
+        
+      },
+      "Bismack Biyombo": {
+        
+      },
+      "DeSagna Diop": {
+        
+      },
+      "Ben Gordon": {
+        
+      },
+      "Kemba Walker": {
+        
+      }
       }]
     }
 }
 
-
-
-
-
-
-
-
+  
+end
 
 binding.pry
+
+
+
+
+
+
+# binding.pry
