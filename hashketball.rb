@@ -142,9 +142,9 @@ def num_points_scored(p_name)
       end
    end
    player_score
+# binding.pry
 
 end
-binding.pry
 
 
 
