@@ -142,11 +142,24 @@ def num_points_scored(p_name)
       end
    end
    player_score
-# binding.pry
-
 end
 
+def shoe_size(p_name)
+  p_and_shoe_sizes = []
+  game_hash.each do |l1key1, l1key2|
+    l1key2[:players].each do |l2key1|
+      l2key1.each do |l3key1, l3key2|
+          s_tring = l3key1.to_s
+          binding.pry
+          
+      end
+    binding.pry
+    end
+binding.pry  
+  end
 
+
+end
 
 
 
