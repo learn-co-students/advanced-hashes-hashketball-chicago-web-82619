@@ -281,6 +281,38 @@ def winning_team
        end
    end
   end
+  winning_team
+end
 
-winning_team
+def player_with_longest_name
+  longest_name = 0
+  player = nil
+  game_hash.each do |l1key1, l1key2|
+    l1key2[:players].each do |l2key1|
+      l2key1.each do |l3key1, l3key2|
+        if longest_name < l3key1.to_s.length
+          longest_name = l3key1.to_s.length
+          player = l3key1.to_s
+        end
+      end
+    end
+  end
+  player
+end
+
+def long_name_steals_a_ton?
+  player = player_with_longest_name
+  most_steals = 0
+  p_most_steals = nil
+  game_hash.each do |l1key1, l1key2|
+    l1key2[:players].each do |l2key1|
+      l2key1.each do |l3key1, l3key2|
+        if most_steals < l3key2[:steals][0]
+          most_steals = l3key2[:steals][0]
+          p_most_steals = true
+        end
+      end
+    end
+  end
+  p_most_steals
 end
