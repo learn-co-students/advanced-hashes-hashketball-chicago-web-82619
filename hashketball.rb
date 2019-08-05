@@ -181,6 +181,20 @@ def team_names
   teams
 end
 
-
+def player_numbers(team)
+  brooklyn_numbers = []
+   game_hash.each do |l1key1, l1key2|
+     l1key2[:players].each do |l2key1|
+       l2key1.each do |l3key1, l3key2|
+        # binding.pry
+         if l1key2[:team_name].include?(team)
+          brooklyn_numbers << l3key2[:number][0]
+        end
+      end
+    end
+   end
+   brooklyn_numbers = brooklyn_numbers.sort
+   brooklyn_numbers
+end
 
 # binding.pry
