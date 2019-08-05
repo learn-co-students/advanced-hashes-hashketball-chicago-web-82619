@@ -258,5 +258,29 @@ def most_points_scored
 # binding.pry
 
 def winning_team
-  binding.pry
+  team1 = "Brooklyn Nets"
+  team2 = "Charlotte Hornets"
+  brooklyn_points = 0
+  charlotte_points = 0
+  winning_team = nil
+  game_hash.each do |l1key1, l1key2|
+     l1key2[:players].each do |l2key1|
+       l2key1.each do |l3key1, l3key2|
+        if l1key2[:team_name].include?(team1)
+          brooklyn_points = brooklyn_points + l3key2[:points][0]
+        else
+          charlotte_points = charlotte_points + l3key2[:points][0]
+        end
+        if brooklyn_points > charlotte_points
+          winning_team = team1
+        else
+          winning_team = team2
+          # most_points =  l3key2[:points][0]
+          # player_name =  l3key1.to_s
+        end
+       end
+   end
+  end
+
+winning_team
 end
