@@ -163,13 +163,23 @@ end
 def team_colors(team)
   color = nil
   game_hash.each do |l1key1, l1key2|
-    l1key2[:players].each do |l2key1|
-      binding.pry
+    l1key2.each do |l2key1|
+        if l2key1[1].include?(team)
+         color = l1key2[:colors]
+      end
+
     end
   end
-  
+color
+end
 
-
+def team_names
+  teams = []
+  game_hash.each do |l1key1, l1key2|
+      teams << l1key2[:team_name]
+  end
+  teams
+end
 
 
 
