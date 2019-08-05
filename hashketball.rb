@@ -197,4 +197,35 @@ def player_numbers(team)
    brooklyn_numbers
 end
 
+def player_stats(player)
+  numbers = {}
+   game_hash.each do |l1key1, l1key2|
+     l1key2[:players].each do |l2key1|
+       l2key1.each do |l3key1, l3key2|
+        # binding.pry
+        s_tring = l3key1.to_s
+        
+         if s_tring == player
+          numbers = {
+            number: l3key2[:number][0],
+            shoe: l3key2[:shoe][0],
+            points: l3key2[:points][0],
+            rebounds: l3key2[:rebounds][0],
+            assists: l3key2[:assists][0],
+            steals: l3key2[:steals][0],
+            blocks: l3key2[:blocks][0],
+            slam_dunks: l3key2[:slam_dunks][0]
+          }
+        end
+      end
+    end
+   end
+   numbers
+end
+
+def big_shoe_rebounds(player)
+  biggest_shoe = 0
+  
+end
+
 # binding.pry
