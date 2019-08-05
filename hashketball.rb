@@ -223,9 +223,40 @@ def player_stats(player)
    numbers
 end
 
-def big_shoe_rebounds(player)
+def big_shoe_rebounds
   biggest_shoe = 0
-  
+  rebounds = 0
+  game_hash.each do |l1key1, l1key2|
+     l1key2[:players].each do |l2key1|
+       l2key1.each do |l3key1, l3key2|
+         if  l3key2[:shoe][0] > biggest_shoe
+           biggest_shoe =  l3key2[:shoe][0]
+           rebounds =  l3key2[:rebounds][0]
+                      # binding.pry
+        end
+     end
+   end
+ end
+ rebounds
 end
 
+def most_points_scored
+  most_points = 0
+  player_name = nil
+  game_hash.each do |l1key1, l1key2|
+     l1key2[:players].each do |l2key1|
+       l2key1.each do |l3key1, l3key2|
+         if  l3key2[:points][0] > most_points
+           most_points =  l3key2[:points][0]
+           player_name =  l3key1.to_s
+        end
+     end
+   end
+  end
+ player_name
+ end
 # binding.pry
+
+def winning_team
+  binding.pry
+end
